@@ -1,70 +1,68 @@
 {
-    "name": "sassnowski/laravel-shareable-models",
-    "description": "Create shareable links from your eloquent models.",
-    "license": "MIT",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Kai Sassnowski",
-            "email": "me@kai-sassnowki.com"
-        }
-    ],
-    "require": {
-        "php": "^8.3",
-        "illuminate/database": "^10.0",
-        "illuminate/http": "^10.0",
-        "illuminate/support": "^10.0",
-        "ramsey/uuid": "^4.7"
-    },
-    "require-dev": {
-        "doctrine/dbal": "^3.5",
-        "ergebnis/composer-normalize": "^2.29",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/larastan": "^2.5.1",
-        "orchestra/testbench": "^8.0",
-        "phpunit/phpunit": "^10.0",
-        "roave/security-advisories": "dev-latest"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "autoload": {
-        "psr-4": {
-            "Sassnowski\\LaravelShareableModel\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Sassnowski\\LaravelShareableModel\\Tests\\": "tests/"
-        }
-    },
-    "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Sassnowski\\LaravelShareableModel\\ShareableLinkServiceProvider"
-            ]
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "@composer normalize"
-        ],
-        "post-update-cmd": [
-            "@composer normalize"
-        ],
-        "analyse": [
-            "vendor/bin/phpstan analyse"
-        ],
-        "check": [
-            "@analyse",
-            "@test"
-        ],
-        "test": [
-            "vendor/bin/phpunit"
-        ]
+  "name": "sassnowski/laravel-shareable-models",
+  "description": "Create shareable links from your eloquent models.",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Kai Sassnowski",
+      "email": "me@kai-sassnowki.com"
     }
+  ],
+  "require": {
+    "php": "^8.3",
+    "illuminate/database": "^11.0",
+    "illuminate/http": "^11.0",
+    "illuminate/support": "^11.0",
+    "ramsey/uuid": "^4.7"
+  },
+  "require-dev": {
+    "doctrine/dbal": "^3.5",
+    "ergebnis/composer-normalize": "^2.29",
+    "mockery/mockery": "^1.4.4",
+    "nunomaduro/larastan": "^2.5.1",
+    "orchestra/testbench": "^8.0",
+    "phpunit/phpunit": "^10.0",
+    "roave/security-advisories": "dev-latest"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Sassnowski\\LaravelShareableModel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {}
+  },
+  "config": {
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Sassnowski\\LaravelShareableModel\\ShareableLinkServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@composer normalize"
+    ],
+    "post-update-cmd": [
+      "@composer normalize"
+    ],
+    "analyse": [
+      "vendor/bin/phpstan analyse"
+    ],
+    "check": [
+      "@analyse",
+      "@test"
+    ],
+    "test": [
+      "vendor/bin/phpunit"
+    ]
+  }
 }
